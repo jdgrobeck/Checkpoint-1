@@ -384,19 +384,30 @@ footer {
     font-weight: bold;
 }
 
+.blog-posts-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 15px;
+    margin-bottom: 20px;
+    
+
+}
+
 @media (min-width: 576px){
     .blog-post-top, .blog-post-middle, .blog-post-bottom {
         display: flex;
         flex-direction: row;
-        height: 50%;
+        height: 25vh;
     }
     
     .blog-post-top-image, .blog-post-middle-image, .blog-post-bottom-image {
         width: 50%;
-        margin-left: 300px;
+        margin-left: 0;
         border: 3px solid black;
-        object-fit: cover;
-        height: 125%;
+        object-fit: contain;
+        height: 100%;
         
     }
     
@@ -406,7 +417,7 @@ footer {
         justify-content: right;
         flex-direction: column;
         width: 75%;
-        height: 75%;
+        height: 100%;
         margin-left: 0;
         padding-bottom: 0;
         margin-bottom: 5px;
@@ -416,18 +427,66 @@ footer {
         font-size: 14px;
         font-weight: bold;
     }
+
+    .blog-posts-container img {
+        width: auto;
+        height: 100%;
+    }
+
+    .blog-posts-container {
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 80%;
+    }
 }
 
+@media (min-width: 992px){
+    .blog-post-top, .blog-post-middle, .blog-post-bottom {
+        display: flex;
+        flex-direction: row;
+        height: 40vh;
+    }
+    
+    .blog-post-top-image, .blog-post-middle-image, .blog-post-bottom-image {
+        width: 100%;
+        /* margin-left: 300px; */
+        border: 3px solid black;
+        /* object-fit: fill; */
+        height: 100%;
+        
+    }
+    
+    .blog-post-top-copy, .blog-post-middle-copy, .blog-post-bottom-copy {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 75%;
+        height: 100%;
+        margin-left: 0;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+        border: 3px solid black;
+        object-fit: contain;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
 
-.blog-posts-container {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    gap: 15px;
-    margin-bottom: 20px;
+    .blog-posts-container img {
+        width: 100%;
+        /* height: auto; */
+        object-fit: cover;
+        object-position: top;
+    }
 
+    .blog-posts-container {
+        margin-right: 10%;
+        margin-left: 10%;
+        /* height: ; */
+    }
 }
+
 
 .read-this {
     background-color: lightblue;
